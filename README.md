@@ -1,25 +1,36 @@
-NppLogCat
+NppLogcat
 =========
 
-A Notepad++ Custom "Language" for LogCat logs.
+A Notepad++ User Defined Language (UDL) for Android logcat logs, for the default and Solarized Dark colour theme.
 
-A custom language for use with Notepad++, which can be downloaded from https://notepad-plus-plus.org/download/v6.8.6.html, to add color to your LogCat error logs that were saved to a text file. Since, as far as I know, you can not import the text files back into Eclipse, the only option is to look at a bunch of plain, boring black text that should be colorized to assist in finding the information tags, debug tags, warning tags, and error tags.
+A custom language for use with [Notepad++](https://notepad-plus-plus.org), to add color to Android Logcat logs that were saved to a text file, similar to the color highlighting used in Eclipse and Android Studio. This version is based on [TronicZomB's original NppLogCat](https://github.com/TronicZomB/NppLogCat) with some improvements for the default color theme, along with a variation for the [Solarized Dark color theme](http://ethanschoonover.com/solarized) by Ethan Schoonover.
 
-But now you can import the LogCat.xml into your Notepad++ Languages and get (partial*) colored lines for your LogCat files. Information is labeled green, debug is blue, warning is orange, and error is red. Just load Notepad++ and click Language -> Define your language… -> Import…, from there find the LogCat.xml file, select it and restart Notepad++. Now you can select LogCat as a language and have the part of each line highlighted with the appropriate colors!
+This user-defined language file can be imported into Notepad++ to get colored lines for your Logcat files. Verbose is grey, info is green, debug is blue, warning is orange, and error is red. This file is compatible with Eclipse's log file export and copy-paste, as well as the command-line `adb logcat` formats (at least the default, `-v thread` and `-v threadtime`).
 
-*Currently only part of the line is colored and I will work on getting the full lines colored appropriatly similar to Eclipse LogCat.
+Prerequisite: Notepad++ Theme
+-----------------------------
 
-INSTALL:
+For this user-defined language to look as intended, you must be using the correct theme in Notepad++. It is built into recent versions of Notepad++. To change to it:
 
-1. Open Notepad++
- 
-2. Click "Language"
- 
-3. Click "Define your language…"
- 
-4. Click "Import…"
- 
-5. Locate the LogCat.xml file and click Ok
+1. Go to the **Settings** menu > **Style Configurator...**.
+2. In the dropdown labeled **Select theme**, choose the style, depending on the Logcat UDL you want to use:
+  * For the default style (`logcat.npp.xml`), choose **Default (stylers.xml)**.
+  * For the Solarized Dark style (`logcat.solarized-dark.npp.xml`), choose **Solarized**.
+3. Click **Save & Close**.
 
-6. Restart Notepad++ and the LogCat language will appear in the list of languages below the "Define your language…" option
+Installation
+------------
 
+1. Open Notepad++.
+2. Go to the **Languages** menu > **Define your language...**. A dialog will appear.
+3. Click on the **Import...** button at the top.
+4. Find and select the appropriate XML file from this repository (`logcat.npp.xml` or `logcat.solarized-dark.npp.xml`). Click OK.
+5. Restart Notepad++. The language "Logcat" (for `logcat.npp.xml`) or "Logcat (Solarized Dark)" (for `locat.solarized-dark.npp.xml`) will appear at the bottom of the **Languages** menu, below the **Define your languages...** item.
+
+Usage
+-----
+
+1. Open a logcat file or paste a logcat into Notepad++.
+2. Go to the **Languages** menu > **Logcat** or **Locat (Solarized Dark)**. The log will be colorized.
+
+You can also modify this style using the **Define your language...** dialog (see installation) in order to associate this language to a specific file extension.
