@@ -31,6 +31,5 @@ Usage
 -----
 
 1. Open a logcat file or paste a logcat into Notepad++.
-2. Go to the **Languages** menu > **Logcat** or **Locat (Solarized Dark)**. The log will be colorized.
-
-You can also modify this style using the **Define your language...** dialog (see installation) in order to associate this language to a specific file extension.
+2. If the file extension is .logcat, the log will be automatically colorized.
+3. Otherwise, go to the **Languages** menu > **Logcat** or **Logcat (Solarized Dark)**. The log then will be colorized.
